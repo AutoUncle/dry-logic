@@ -15,7 +15,7 @@ module Dry
             keys = options.fetch(:keys)
             evaluator = Evaluator::Set.new(keys)
 
-            super(rule, options.merge(evaluator: evaluator))
+            super(rule, **options, evaluator: evaluator)
           end
         end
 
